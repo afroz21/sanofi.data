@@ -1,0 +1,11 @@
+- name: second playbook
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: task1
+      debug:
+        msg: Ip address is {{ ansible_default_ipv4 }}
+
+    - name: task2
+      debug:
+        msg: FQDN {{ ansible_fqdn }}

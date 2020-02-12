@@ -1,0 +1,14 @@
+- name: install sw
+  hosts: all
+  tasks:
+    - name: install check failed
+      yum:
+        name: httpd
+        state: present
+      register: test
+      failed_when: test.changed == false
+
+    - name: print
+      debug:
+      msg: print hi
+

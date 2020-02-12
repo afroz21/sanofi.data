@@ -1,0 +1,8 @@
+- name: third playbook
+  hosts: all
+  tasks:
+    - name: task1
+      copy:
+        content: "hi 1 there"
+        follow: yes
+        dest: /tmp/abc1

@@ -1,0 +1,8 @@
+- name: roles
+  yum:
+    name: vsftpd
+    state: present
+
+- name: print
+  debug:
+    msg: print

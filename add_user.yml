@@ -1,0 +1,5 @@
+- name: Add user and group
+  hosts: all
+  tasks:
+  - group: name='admin' state=present
+  - user: name=vaibhav group=admin

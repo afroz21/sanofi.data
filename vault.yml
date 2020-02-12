@@ -1,0 +1,6 @@
+- name: vault
+  hosts: all
+  vars_files: vault
+  tasks:
+    - debug:
+        msg: "{{ var1 }}"

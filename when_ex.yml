@@ -1,0 +1,16 @@
+- name: using condition
+  hosts: all
+  vars_prompt:
+    name: var1
+    prompt: 'var1 value'
+    private: no
+  tasks:
+    - name: print debug
+      debug:
+        msg: Printing this when condition is true
+      when: var1 == '123'
+
+    - name: print 2
+      debug:
+        msg: Printing this when condition is false
+      when: var1 != '123'

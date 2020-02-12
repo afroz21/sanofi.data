@@ -1,0 +1,12 @@
+- name: Unistall HTTPD
+  hosts: all
+  tasks:
+    - name: remove
+      yum:
+       name: httpd
+       state: remove
+       register: test
+
+    - name: print
+      debug:
+        var: test

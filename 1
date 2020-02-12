@@ -1,0 +1,6 @@
+-- name: using facts
+  hosts: all
+  become: yes
+  tasks:
+    -debug:
+       msg: this machine ip address is {{ ansible_all_ipv4_addresses }}

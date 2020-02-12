@@ -1,0 +1,10 @@
+- name: second playbook
+  hosts: all
+  vars_prompt:
+   - name:  pkg1
+     prompt: 'Package name'
+     private: no
+  tasks:
+    - name: task1
+      debug:
+        msg: bye there welcome to ansible 101 {{ pkg1 }}
